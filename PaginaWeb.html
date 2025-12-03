@@ -7,6 +7,100 @@
     <link rel="stylesheet" href="Estilos.css">
 </head>
 <body>
+    <header class="header">
+        <img src="Imagenes/Logo.PNG" class="logo" alt="logo">
+        <div>
+            <h1>Mini Wikipedia</h1>
+            <p>Bienvenido a Mini Wikipedia, aquí compartimos contenido sencillo y entretenido sobre Deportes, Historia, Ciencia, Entretenimiento
+                y Arte, para que descubras datos curiosos, personajes importantes y temas interesantes sin tener que leer textos eternos.</p>
+        </div>
+    </header>
+
+    <!-- Imagen Principal -->
+    <section class="main-image">
+        <img src="Imagenes/Inicio.jpg" alt="principal">
+    </section>
+
+    <!-- Sección de Carpetas -->
+    <section class="carpetas">
+        <h2>Seccion de Carpetas</h2>
+
+        <div class="secciones">
+            <div class="deportes card">
+                <img src="Imagenes/Deportes.avif" alt="deportes">
+                <h3>Deportes</h3>
+                <p>Descubre todo sobre el mundo deportivo: noticias, curiosidades y datos de tus disciplinas favoritas. Mantente al día y vive la pasión del deporte con nosotros.</p>
+                <button onclick="location.href='#seleccion'">Entrar</button>
+
+            </div>
+
+            <div class="historia card">
+                <img src="Imagenes/Historia.png" alt="historia">
+                <h3>Historia</h3>
+                <p>Explora los hechos, personajes y acontecimientos que marcaron nuestro pasado. Descubre cómo la historia da forma al presente y al futuro.</p>
+                <button onclick="location.href='#seleccion'">Entrar</button>
+
+            </div>
+
+            <div class="ciencia card">
+                <img src="Imagenes/Ciencia.avif" alt="ciencia">
+                <h3>Ciencia</h3>
+                <p>Sumérgete en el mundo del conocimiento, los descubrimientos y la innovación. Aprende cómo la ciencia explica el mundo que nos rodea y transforma nuestro futuro.</p>
+                <button onclick="location.href='#seleccion'">Entrar</button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN OCULTA QUE APARECERÁ AL HACER CLIC -->
+    <section id="seleccion" class="seleccion-contenido">
+
+        <h2>Sección Seleccionada</h2>
+
+        <div class="seleccion-grid">
+        <!-- Texto -->
+        <div class="texto">
+            <h3>TITULO</h3>
+            <p>Cuerpo del texto para lo que desees ampliar sobre el tema principal.</p>
+
+            <h4>Todo sobre el tema Seleccionado</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, alias veniam. Architecto delectus illo, reiciendis consequatur, 
+                quisquam sint quos molestiae tenetur aliquid eius inventore eveniet molestias vero perspiciatis, rem corporis!</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quidem assumenda deleniti ut tenetur hic fugiat, corrupti voluptas distinctio
+                 ratione voluptates numquam soluta quae quas tempora. Fuga, quibusdam ullam. Optio..</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, mollitia suscipit eos, nihil eligendi ab iure quas dolor nisi
+                 labore eveniet maxime expedita cum assumenda incidunt laboriosam voluptatum consequatur velit.</p>
+        </div>
+
+        <!-- Seccion abierta -->
+        <div class="imagen">
+            <img src="Imagenes/Seleccion.jpg" alt="tema seleccionado">
+        </div>
+
+        </div>
+            <h2 class="otros-title">Otros temas recomendados</h2>
+
+            <div class="otros-grid">
+
+            <div class="card-reco">
+                <img src="Imagenes/Entretenimiento.png">
+                <h3>Entretenimiento</h3>
+                <p>Descubre lo mejor del mundo del entretenimiento: noticias, curiosidades y todo lo que necesitas para divertirte y mantenerte al día con tus series, películas, música y más.</p>
+                <button>Entrar</button>
+            </div>
+
+            <div class="card-reco">
+                <img src="Imagenes/Arte.avif">
+                <h3>Arte</h3>
+                <p>Sumergete en el mundo del arte y déjate inspirar por historias, colores y creaciones que despiertan la imaginación y hacen vibrar el alma</p>
+                <button>Entrar</button>
+            </div>
+        </div>
+
+</section>
+
     <script src="Script.js"></script>
 </body>
 </html>
