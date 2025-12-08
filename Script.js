@@ -1,4 +1,4 @@
-/* Temas buscados*/
+/* Temas buscados */
 const wikiTopics = {
     deportes: "Deporte",
     historia: "Historia",

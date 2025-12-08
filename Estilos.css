@@ -71,6 +71,7 @@ body {
     background: linear-gradient(45deg, red, orange, yellow, green, blue, violet);
     background-clip: padding-box;
     padding: 5px;
+    animation: palpitar 2s infinite;
 }
 .card h3 {
     margin: 0 0 8px 0;
@@ -174,6 +175,7 @@ body {
     background: linear-gradient(45deg, red, orange, yellow, green, blue, violet);
     background-clip: padding-box;
     padding: 5px;
+    animation: palpitar 2s infinite;
 }
 
 .card-reco h3 {
@@ -219,4 +221,62 @@ body {
     50% { color: #0000ff; }
     75% { color: #ffff00; }
     100% { color: #ff00ff; }
+}
+@keyframes palpitar {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+/* Tablet */
+@media (max-width: 1024px) {
+    .card {
+        width: 45%; 
+    }
+    .card-reco {
+        width: 45%;
+    }
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-texto h1 {
+        font-size: 3rem;
+    }
+    .header-texto p {
+        font-size: 1.5rem;
+    }
+    .seleccion-grid .texto,
+    .seleccion-grid .imagen {
+        width: 100%;
+    }
+}
+
+/* Móvil */
+@media (max-width: 480px) {
+    .card, .card-reco {
+        width: 100%; 
+    }
+    .header {
+        flex-direction: column; 
+        text-align: center;
+        gap: 15px;
+        padding: 20px;
+    }
+    .header-texto h1 {
+        font-size: 2rem;
+    }
+    .header-texto p {
+        font-size: 1.2rem;
+    }
+    .seleccion-grid {
+        flex-direction: column; 
+        gap: 20px;
+    }
+    .seleccion-grid .texto,
+    .seleccion-grid .imagen {
+        width: 100%;
+    }
+    .otros-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
