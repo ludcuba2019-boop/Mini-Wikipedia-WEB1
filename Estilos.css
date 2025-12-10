@@ -60,9 +60,15 @@ body {
 .card {
     width: 30%;
     text-align: left;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .card img {
-    width: 100%;
+    width: 95%;  
+    display: block;
+    margin: 0 auto;
     height: 600px;
     margin-bottom: 10px;
     object-fit: cover;
@@ -71,7 +77,15 @@ body {
     background: linear-gradient(45deg, red, orange, yellow, green, blue, violet);
     background-clip: padding-box;
     padding: 5px;
-    animation: palpitar 2s infinite;
+}
+.card img,
+.card-reco img {
+    transition: transform 0.3s ease;
+}
+
+.card img:hover,
+.card-reco img:hover {
+    transform: scale(1.05);
 }
 .card h3 {
     margin: 0 0 8px 0;
@@ -114,7 +128,7 @@ body {
 .seleccion-grid .texto {
     width: 50%;
     font-size: 1.8rem;
-    line-height: 1.8;
+    line-height: 2;
     color: #ddd;
 }
 .seleccion-grid .texto h3 {
@@ -127,7 +141,7 @@ body {
 }
 .seleccion-grid .texto p {
     font-size: 1.7rem;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .seleccion-grid .texto .wiki-link {
@@ -163,8 +177,14 @@ body {
 }
 
 .card-reco {
-    width: 40%;
+    width: 70%; 
+    display: block;
+    margin: 0 auto;
     text-align: center;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .card-reco img {
