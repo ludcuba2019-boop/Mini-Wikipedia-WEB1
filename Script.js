@@ -6,7 +6,6 @@ const wikiTopics = {
     entretenimiento: "Entretenimiento",
     arte: "Arte"
 };
-
 /* Funcionmes*/
 async function cargarWikipedia(seccion) {
     const tema = wikiTopics[seccion];
