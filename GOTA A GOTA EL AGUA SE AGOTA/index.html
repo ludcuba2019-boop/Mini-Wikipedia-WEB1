@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!--
+        Content-Security-Policy básica: el juego no carga scripts
+        externos ni necesita conexión a red, así que restringimos
+        todo al propio origen como buena práctica de higiene.
+    -->
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline';"
+    >
+
+    <title>Gota a Gota el Agua se Agota</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="game">
+
+        <!-- HUD -->
+
+        <header>
+
+            <div class="logo">
+                💧 Gota a Gota el Agua se Agota
+                <span>LA PAZ</span>
+            </div>
+
+            <div
+                class="hud"
+                role="status"
+                aria-live="polite"
+            >
+
+                <div>
+                    🏆
+                    <strong id="score">0</strong>
+                </div>
+
+                <div>
+                    🔥
+                    <strong id="combo">x0</strong>
+                </div>
+
+                <div>
+                    ⏱
+                    <strong id="time">60</strong>
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- AGUA -->
+
+        <div class="resource">
+
+            <div class="resource-title">
+
+                <span>💧 AGUA RECUPERADA</span>
+
+                <strong id="water">
+                    0%
+                </strong>
+
+            </div>
+
+            <div
+                class="bar"
+                role="progressbar"
+                aria-label="Porcentaje de agua recuperada"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                id="waterBarWrapper"
+            >
+
+                <div
+                    id="waterBar"
+                    class="water-bar"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- GAME -->
+
+        <main
+            id="gameArea"
+            class="game-area"
+        >
+
+            <div class="city">
+
+                <div class="building b1">
+                    🏢
+                </div>
+
+                <div class="building b2">
+                    🏬
+                </div>
+
+                <div class="building b3">
+                    🏠
+                </div>
+
+                <div class="mountain">
+                    ⛰️
+                </div>
+
+            </div>
+
+
+            <!-- PLAYER -->
+
+            <div
+                id="player"
+                class="player"
+            >
+                🧑‍🚀
+            </div>
+
+
+            <!-- START -->
+
+            <div
+                id="startScreen"
+                class="start-screen"
+            >
+
+                <div class="start-icon">
+                    💧
+                </div>
+
+                <h1>
+                    GOTA A GOTA EL AGUA SE AGOTA
+                </h1>
+
+                <p>
+                    La ciudad está perdiendo agua.
+                </p>
+
+                <p>
+                    Tú eres la última oportunidad.
+                </p>
+
+                <p
+                    id="startTip"
+                    class="tip"
+                ></p>
+
+                <button id="startButton">
+                    🚀 COMENZAR
+                </button>
+
+                <small>
+                    ← → / A D para moverte
+                    <br>
+                    ESPACIO para recuperar agua
+                </small>
+
+            </div>
+
+
+            <!-- PAUSA (al cambiar de pestaña) -->
+
+            <div
+                id="pauseScreen"
+                class="start-screen hidden"
+            >
+
+                <div class="start-icon">
+                    ⏸️
+                </div>
+
+                <h1>PAUSA</h1>
+
+                <p>El juego se pausó porque cambiaste de pestaña.</p>
+
+                <button id="resumeButton">
+                    ▶ CONTINUAR
+                </button>
+
+            </div>
+
+
+            <!-- FEEDBACK -->
+
+            <div
+                id="feedback"
+                class="feedback"
+                aria-live="assertive"
+            ></div>
+
+
+            <!-- CONTROLES -->
+
+            <div class="controls">
+
+                <button
+                    id="leftButton"
+                    aria-label="Mover a la izquierda"
+                >
+                    ◀
+                </button>
+
+                <button
+                    id="actionButton"
+                    aria-label="Recuperar agua"
+                >
+                    💧
+                </button>
+
+                <button
+                    id="rightButton"
+                    aria-label="Mover a la derecha"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+        </main>
+
+
+        <footer>
+
+            <span>
+                💧 Cada gota cuenta
+            </span>
+
+            <span>
+                🎮 Supera tu récord
+            </span>
+
+        </footer>
+
+    </div>
+
+
+    <!-- FINAL -->
+
+    <div
+        id="gameOver"
+        class="overlay hidden"
+    >
+
+        <div class="final-card">
+
+            <div
+                id="finalIcon"
+                class="final-icon"
+            >
+                🏆
+            </div>
+
+            <h2 id="finalTitle">
+                ¡MISIÓN COMPLETADA!
+            </h2>
+
+            <p id="finalMessage">
+                La ciudad te necesita.
+            </p>
+
+            <p
+                id="finalTip"
+                class="tip"
+            ></p>
+
+            <div class="final-score">
+
+                <span>
+                    PUNTUACIÓN
+                </span>
+
+                <strong id="finalScore">
+                    0
+                </strong>
+
+            </div>
+
+            <button id="restartButton">
+                🔄 INTENTAR DE NUEVO
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
